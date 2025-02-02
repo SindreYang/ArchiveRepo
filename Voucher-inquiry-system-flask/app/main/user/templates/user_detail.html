@@ -1,0 +1,158 @@
+{% extends "base.html" %}
+{% from "bootstrap/pagination.html" import render_pagination %}
+{% block mycontent %}
+    <div class="jumbotron">
+        <div class="row">
+            {%- if user.avatar_url() -%}
+                <div class="col-md-3 animated bounceIn">
+                    {%- if current_user.id == user.id or current_user.can(Permission.UPDATE_OTHERS_INFORMATION) -%}
+                        <a href="{{ url_for('user.avatar',user_id=user.id) }}" data-toggle="tooltip"
+                           data-placement="bottom" title="点击修改头像">
+                            <div class="avatar avatar-large"
+                                 style="background-image: url({{ user.avatar_url() }})"></div>
+                        </a>
+                    {%- else -%}
+                        <div class="avatar avatar-large"
+                             style="background-image: url({{ user.avatar_url() }})"></div>
+                    {%- endif -%}
+                </div>
+            {%- endif -%}
+            <div class="col-md-6 col-md-offset-1 animated fadeIn">
+                <h1 class="page-header">{{ user.name }}
+                    {% if user.headline %}
+                        <small>{{ user.headline }}</small>
+                    {% endif %}
+
+                </h1>
+
+                <p>工号: {{ user.job_id }}</p>
+                {% if user.major %}
+                    <p>部门: {{ user.major }}</p>
+                {% endif %}
+                <p>加入日期: {{ user.member_since.strftime('%d %B %Y - %H:%M:%S') }}</p>
+                {% if current_user.id==user.id or current_user.can(Permission.UPDATE_OTHERS_INFORMATION) %}
+                    <a class="btn btn-info" href="{{ url_for('user.edit',user_id=user.id) }}">编辑资料</a>
+                {% endif %}
+                {% if current_user.id==user.id %}
+                    <a class="btn btn-danger" href="{{ url_for('auth.change_password',user_id=user.id) }}">修改密码</a>
+                {% endif %}
+                {% if current_user.can(Permission.ADMINISTER) %}
+                <a class="btn btn btn-danger" href="{{ url_for('user.remove_password',user_id=user.id) }}">重置密码(特权)</a>
+                {% endif %}
+
+
+            </div>
+        </div>
+
+
+        {% if user.about_me_html %}
+            <h2>
+                <small>个人简介</small>
+            </h2>
+            {{ user.about_me_html|safe }}
+        {% elif user.about_me %}
+            <p>{{ user.about_me }}</p>
+        {% endif %}
+
+
+    </div>
+
+    <div class="well well-lg" id="log">
+        <ul class="nav nav-tabs" role="tablist">
+            {% if request.args.get('show',0)!='1' %}
+                <li role="presentation" class="active"><a href="#log" role="tab">当前授权信息</a></li>
+                <li role="presentation"><a href="{{ url_for('user.detail',user_id=user.id,show=1,_anchor='log') }}"
+                                           role="tab">历史授权记录</a>
+                </li>
+            {% else %}
+                <li role="presentation"><a href="{{ url_for('user.detail',user_id=user.id,show=0,_anchor='log') }}"
+                                           role="tab">当前授权信息</a>
+                </li>
+                <li role="presentation" class="active"><a href="#log" role="tab">历史授权记录</a></li>
+            {% endif %}
+        </ul>
+        <!-- Tab panes -->
+        <div class="tab-content row">
+            {% if request.args.get('show',0)!='1' %}
+                <table class="table table-striped table-hover">
+                    <thead>
+                    <tr>
+                        <th>授权凭证号</th>
+                        <th>授权授权项目号</th>
+                        <th class="hidden-xs">授权日期</th>
+                        <th class="hidden-xs">撤销日期</th>
+                        {%- if current_user.is_authenticated and current_user.id==user.id -%}
+                            <th>操作</th>
+                        {%- endif -%}
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {% for log in logs %}
+                        <tr class="animated fadeIn delay-{{ loop.index0 }}">
+                            <td><a href="{{ url_for('book.detail',book_id=log.book.id) }}">{{ log.book.Voucher_number }}</a>
+                            <td><a href="{{ url_for('book.detail',book_id=log.book.id) }}">{{ log.book.Project_number }}</a>
+                                <p class="visible-xs-block">授权日期:<span
+                                        class="line-wrap">{{ log.borrow_timestamp.strftime('%d %B %Y - %H:%M:%S') }}</span>
+                                </p>
+                                <p class="visible-xs-block">撤销日期:<span
+                                        class="line-wrap">{{ log.return_timestamp.strftime('%d %B %Y - %H:%M:%S') }}</span>
+                                </p>
+                            </td>
+                            </td>
+                            <td class="hidden-xs">{{ log.borrow_timestamp.strftime('%d %B %Y - %H:%M:%S') }}</td>
+                            <td class="hidden-xs">{{ log.return_timestamp.strftime('%d %B %Y - %H:%M:%S') }}</td>
+                            {%- if current_user.is_authenticated and current_user.id==user.id -%}
+                                <td><a class="btn btn-primary"
+                                       href="{{ url_for('log.book_return',log_id=log.id,next=request.path) }}">
+                                    撤销</a></td>
+                            {%- endif -%}
+                        </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+            {% else %}
+                <table class="table table-striped table-hover">
+                    <thead>
+                    <tr>
+                        <th>历史授权凭证号</th>
+                        <th>历史授权授权项目号</th>
+                        <th class="hidden-xs">授权日期</th>
+                        <th class="hidden-xs">撤销日期</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {% for log in logs %}
+                        <tr class="animated fadeIn delay-{{ loop.index0 }}">
+                            <td><a href="{{ url_for('book.detail',book_id=log.book.id) }}">{{ log.book.Voucher_number }}</a>
+                            <td><a href="{{ url_for('book.detail',book_id=log.book.id) }}">{{ log.book.Project_number }}</a>
+                                <p class="visible-xs-block">
+                                    授权日期:<span
+                                        class="line-wrap">{{ log.borrow_timestamp.strftime('%d %B %Y - %H:%M:%S') }}</span>
+                                </p>
+                                <p class="visible-xs-block">
+                                    撤销日期:<span
+                                        class="line-wrap">{{ log.return_timestamp.strftime('%d %B %Y - %H:%M:%S') }}</span>
+                                </p>
+                            </td>
+                            </td>
+                            <td class="hidden-xs">{{ log.borrow_timestamp.strftime('%d %B %Y - %H:%M:%S') }}</td>
+                            <td class="hidden-xs">{{ log.return_timestamp.strftime('%d %B %Y - %H:%M:%S') }}</td>
+                        </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+                </div>
+            {% endif %}
+        {% if pagination and pagination.pages>1 %}
+            <div class="container-fluid text-center">
+                {{ render_pagination(pagination) }}
+            </div>
+        {% endif %}
+    </div>
+{% endblock %}
+{% block scripts %}
+    {{ super() }}
+    <script>
+        $('[data-toggle="tooltip"]').tooltip()
+    </script>
+{% endblock %}

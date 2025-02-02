@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% from "bootstrap/pagination.html" import render_pagination %}
+{% block mycontent %}
+    <table class="table table-striped table-hover">
+        <h1 class="page-header">{{ title }}</h1>
+        <thead>
+        <tr>
+            <th>用户名</th>
+            <th>用户工号</th>
+            <th>用户登录日期</th>
+            <th>用户权限</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for user in users %}
+            <tr class="animated fadeIn delay-{{ loop.index0 }}">
+                <td><a href="{{ url_for('user.detail',user_id=user.id) }}">{{ user.name }}</a></td>
+                <td>{{ user.job_id }}</td>
+                <td>{{ user.member_since}}</td>
+                <td><a href="{{ url_for('user.change_permission',user_id=user.id) }}">权限: {% if  user.role_id==1 %} 查阅人员 {% elif  user.role_id==2 %} 扫描员 {% elif  user.role_id==3 %} 管理员 {% endif %} </a></td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    {% if pagination and pagination.pages > 1 %}
+        <div class="container-fluid text-center">
+            {{ render_pagination(pagination) }}
+        </div>
+    {% endif %}
+{% endblock %}

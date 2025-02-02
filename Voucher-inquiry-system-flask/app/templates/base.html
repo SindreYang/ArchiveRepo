@@ -1,0 +1,108 @@
+{%- extends "bootstrap/base.html" -%}
+{%- from 'bootstrap/utils.html' import flashed_messages,icon -%}
+{%- block metas -%}
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+{%- endblock metas -%}
+{%- block title -%}
+    {%- if title -%}
+        {{ title }} - 凭证影像化系统
+    {%- else -%}
+        凭证影像化系统
+    {%- endif -%}
+{%- endblock -%}
+{%- block styles -%}
+    {#    {{ super() }}#}
+    <link href="{{ url_for('static',filename='css/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static',filename='css/bootstrap-theme.min.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static',filename='css/main.css') }}" rel="stylesheet">
+{%- endblock -%}
+{%- block body_attribs %} class="Site"{%- endblock -%}
+{%- block navbar -%}
+    <nav class="navbar  navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                        data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                {%- if current_user.can(Permission.BORROW_BOOK) -%}
+                <a class="navbar-brand" href="{{ url_for('main.index') }}">我的凭证</a>
+                {%- endif -%}
+            </div>
+
+            <!-- 收集导航链接，表单和其他内容以进行切换 -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                        {%- if current_user.is_authenticated -%}
+                        <li {%- if request.path == url_for('book.tags') %} class="active"{%- endif -%} ><a
+                                href="{{ url_for('book.tags') }}">分类</a></li>
+                        {%- if current_user.can(Permission.ADD_BOOK) -%}
+                            <li {%- if request.path == url_for('book.add') %} class="active"{%- endif -%} ><a
+                                    href="{{ url_for('book.add') }}">添加新凭证</a></li>
+                        {%- endif -%}
+                        {%- if current_user.can(Permission.ADMINISTER) -%}
+                        <li {%- if request.path == url_for('book.index') %} class="active"{%- endif -%} ><a
+                                href="{{ url_for('book.index') }}">凭证清单</a></li>
+                        <li {%- if request.path == url_for('user.index') %} class="active"{%- endif -%} ><a
+                                href="{{ url_for('user.index') }}">已注册用户</a></li>
+                        <li {%- if request.path == url_for('log.index') %} class="active"{%- endif -%} ><a
+                                href="{{ url_for('log.index') }}">授权信息汇总</a></li>
+                    {%- endif -%}
+                    {%- endif -%}
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    {%- if current_user.is_authenticated -%}
+                        <li {% if request.path == url_for('user.detail',user_id=current_user.id) -%}
+                            class="active"{%- endif -%} >
+                            <a href="{{ url_for('user.detail',user_id=current_user.id) }}">{{ current_user.name }}</a>
+                        </li>
+                        <li><a href="{{ url_for('auth.logout') }}">登出</a></li>
+                    {%- else -%}
+                        <li><a href="{{ url_for('auth.login') }}">登入</a></li>
+                    {%- endif -%}
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+    </nav>
+{%- endblock -%}
+
+{%- block content -%}
+    <main class="container-fluid Site-content">
+        {%- with icon_transform={
+    'success':icon('ok'),
+    'danger':icon('ban-circle'),
+    'info': icon('info-sign'),
+    'warning': icon('alert')} -%}
+            {%- set messages=get_flashed_messages(with_categories=True) -%}
+            {%- if messages -%}
+                {%- for cat, msg in messages -%}
+                    <div class="alert alert-{{ cat }} alert-dismissible animated bounceIn delay-{{ loop.index0 }}"
+                         role="alert">
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span
+                                aria-hidden="true">&times;</span></button>
+                        {{ icon_transform.get(cat) ~' '~ msg }}
+                    </div>
+                {%- endfor -%}
+            {%- endif -%}
+        {%- endwith -%}
+        {%- block mycontent -%}{%- endblock -%}
+    </main>
+
+    <footer class="panel panel-inverse">
+        <div id="site-footer-content">
+            <a>
+            </a><span class="username">凭证影像化</span></a>
+            </div>
+
+        </div>
+    </footer>
+{%- endblock -%}
+
+{%- block scripts -%}
+    <script src="{{ url_for('static',filename='js/jquery-2.2.3.min.js') }}"></script>
+    <script src="{{ url_for('static',filename='js/bootstrap.min.js') }}"></script>
+{%- endblock scripts -%}
