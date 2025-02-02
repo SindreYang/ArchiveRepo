@@ -1,0 +1,19 @@
+<!DOCTYPE RCC>
+<RCC version="1.0">
+ <qresource>
+  <file alias="preset_save">pics/save.png</file>
+  <file alias="preset_save_as">pics/save-as.png</file>
+  <file alias="preset_clear">pics/delete.png</file>
+  <file alias="vslider">pics/vslider.xpm</file>
+  <file alias="hslider">pics/hslider.xpm</file>
+  <file alias="vslider_groove">pics/vslider_groove.xpm</file>
+  <file alias="hslider_groove">pics/hslider_groove.xpm</file>
+  <file alias="listen">pics/listen.png</file>
+  <file alias="mute">pics/mute.png</file>
+  <file alias="led_on">pics/led_on.png</file>
+  <file alias="led_off">pics/led_off.png</file>
+    <file alias="mygroove">pics/mygroove.png</file>
+      <file alias="myslider">pics/myslider.png</file>
+
+ </qresource>
+</RCC>

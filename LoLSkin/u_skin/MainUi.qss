@@ -1,0 +1,28 @@
+/**********Title**********/
+QLabel#TitleLabel{
+        color: rgba(255, 0, 0, 255);
+        font: 100 10pt;
+}
+
+/**********MainWindow******/
+MainWindow{
+    background-color: rgb(245, 245, 247, 255);
+}
+
+/**********Button**********/
+QTitleButton{
+    color: rgba(0, 0, 0, 255);
+    border: 0px;
+    font: 100 10pt;
+}
+QTitleButton#MinMaxButton:hover{
+    color: rgba(0, 0, 255, 200);
+    border: 0px;
+    font: 100 10pt;
+}
+QTitleButton#CloseButton:hover{
+    color: rgba(0, 0, 255, 200);
+    border: 0px;
+    font: 100 10pt;
+}
+

@@ -1,0 +1,335 @@
+/****************主界面背景*******************/
+rhdz{
+        background:#3B3B3B;
+	color:white; 
+
+}
+
+/****************电平表部件*******************/
+
+/*整体*/
+VolumeMeter {
+        background:black;
+        text-align:center;
+        border-radius:10px;
+        padding:5px 10px 5px 10px;
+        border: 0px;
+        margin: 1px;
+        margin-top: 28px;
+}
+/*标题*/
+#top_name_label{
+        font: bold 12px;
+        color: rgb(169,169,169);
+        border:2px solid #808080;
+        border-radius:5px;
+        background:black;
+        border: 1px outset  gray;
+}
+
+/*底部标签*/
+#bottom_name_label{
+        font: bold 12px;
+        color: rgb(169,169,169);
+        border:1px solid #808080 outset #808080;;
+        border-radius:5px;
+        background:black;
+
+}
+/*报警标签*/
+#Alarm_label{
+    color:  rgb(169,169,169);
+    border:1px solid #808080 outset #808080;;
+    border-radius:5px;
+    background:black;
+}
+
+/*peek*/
+#vu_left,#vu_right{
+    color:yellow;
+    border-radius:10px;
+    background:black;
+    border: none;
+
+}
+/*底部按钮*/
+#bottom_left_button{
+    color:rgb(169,169,169);
+    border-radius:10px;
+    background:black;
+    border: none;
+    padding: 4px;
+    qproperty-icon: url(:/setting);
+
+}
+#bottom_right_button{
+    border-radius:10px;
+    background:black;
+    border: none;
+    padding: 4px;
+    qproperty-icon: url(:/listen_blue);
+
+}
+#bottom_right_button:pressed, #bottom_left_button:pressed{
+    border-radius:10px;
+    background:rgb(169, 169, 169);
+    border: 1px outset #07294b;
+    padding: 4px;
+
+}
+/*标头部分*/
+#pushButton_1,#pushButton_2,#pushButton_3,#pushButton_4,
+#pushButton_5,#pushButton_6,#pushButton_7,#pushButton_8,
+#pushButton_9,#pushButton_10,#pushButton_11,#pushButton_12,
+#pushButton_13,#pushButton_14,#pushButton_15,#pushButton_16{
+    background:#282828;
+    color:white;
+
+    border: 2px outset black;
+
+    border-radius:8px;
+}
+
+
+#pushButton_1:pressed,#pushButton_2:pressed,#pushButton_3:pressed,#pushButton_4:pressed,
+#pushButton_5:pressed,#pushButton_6:pressed,#pushButton_7:pressed,#pushButton_8:pressed,
+#pushButton_9:pressed,#pushButton_10:pressed,#pushButton_11:pressed,#pushButton_12:pressed,
+#pushButton_13:pressed,#pushButton_14:pressed,#pushButton_15:pressed,#pushButton_16:pressed{
+    background-color:darkgray;
+    border-style: inset;
+    }
+/****************监听部件*******************/
+
+/*整体*/
+
+QTabWidget {
+        background:#1F1F1F;
+        color:white;
+        border-radius:8px;
+}
+
+control_meter{
+    border-radius:10px;
+    background:#3C3C3C;
+    text-align:center;
+
+    padding:5px 10px 5px 10px;
+}
+control_meter QLabel{
+    color:rgb(169,169,169);
+    text-align:center;
+    qproperty-alignment:AlignHCenter;
+    border-radius:10px;
+    background:black;
+    padding:5px 10px 5px 10px;
+}
+
+
+#volumeBox{
+    color:rgb(169,169,169);
+    font-size:10px;
+    qproperty-alignment:AlignHCenter;
+    border-radius:0px;
+    background:black;
+    padding:0px;
+}
+
+#vuBox{
+    color:rgb(169,169,169);
+    font-size:10px;
+    qproperty-alignment:AlignHCenter;
+    border-radius:0px;
+    background:black;
+    padding:0px;
+}
+control_meter QTextEdit{
+    color:rgb(169,169,169);
+
+    border-radius:10px;
+    background:black;
+    text-align:center;
+    padding:5px 10px 5px 10px;
+}
+
+
+control_meter QPushButton{
+        background:qlineargradient(x1:0, y1:0, x2:2, y2:2,
+        stop: 0 black, stop: 1.0 darkgray);
+        color:rgb(169,169,169);
+        border: 3px outset black;
+        border-radius:14px;
+        padding: 4px;
+}
+control_meter QPushButton:pressed{
+        background:#222222;
+        border-radius:10px;
+        border-color: gray;
+        /* 改变边框风格 */
+        border-style:inset;
+
+        /* 使文字有一点移动 */
+        padding-left:6px;
+        padding-top:6px;
+
+}
+/****************其他部件*******************/
+
+QDialog{
+background:#1F1F1F;
+color:white;
+
+
+}
+
+QDialog QLabel{
+color:rgb(169,169,169);
+
+
+}
+
+QDialog QCheckBox {
+    color:rgb(169,169,169);
+}
+QDialog QCheckBox {
+    color:rgb(169,169,169);
+
+}
+QDialog QRadioButton{
+    color:rgb(169,169,169);
+
+}
+QDialog QGroupBox{
+    color:white;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+/*切换键*/
+#pushbutton0_32,#pushbutton32_64,#changeindex{
+    background:qlineargradient(x1:0, y1:0, x2:2, y2:2,
+                    stop: 0 black, stop: 1.0 darkgray);
+    color:white;
+    border: 2px outset gray;
+    border-radius:10px;
+    padding: 4px;
+}
+#pushbutton0_32:pressed,#pushbutton32_64:pressed,#changeindex:pressed{
+    background:qlineargradient(x1:0, y1:0, x2:2, y2:2,
+                    stop: 0 black, stop: 1.0 darkgray);
+    color:white;
+    border: 2px outset gray;
+    border-radius:10px;
+    padding: 6px;
+    border-style:inset;
+    /* 使文字有一点移动 */
+    padding-left:6px;
+    padding-top:6px;
+
+
+QLabel{
+	color: white;
+        border:1px solid #808080;
+        border-radius:8px;
+        border: 2px outset gray;
+        background:qlineargradient(x1:0, y1:0, x2:2, y2:1,
+                        stop: 0 (210,210,210), stop: 1 darkgray);
+}
+
+
+QTableView {
+	background:transparent;
+	color:white; 
+}
+
+
+
+QPushButton{
+	background:qlineargradient(x1:0, y1:0, x2:1, y2:1,
+			stop: 0 black, stop: 1.0 darkgray);
+	color:white; 
+	border: 2px outset gray;
+	border-radius:10px;
+        padding: 4px;
+}
+
+
+
+QGroupBox {
+	border: 2px inset gray;
+	border-radius: 10px;
+	font-weight: bold;
+}
+
+QGroupBox::title {
+	color: white;
+	subcontrol-origin: margin;
+	subcontrol-position: top center; /* position at the top center */
+    	padding: 0 4px;
+    	margin: 0px 4px 4px 4px;
+}
+
+QLineEdit {
+	border: 2px solid gray;
+	border-radius: 10px;
+	background:qlineargradient(x1:0, y1:0, x2:1, y2:1,
+			stop: 0 black, stop: 1.0 darkgray);
+	color:white; 
+	selection-background-color: darkgray;
+}
+
+QLineEdit:focus {
+	border-color: white;
+}
+
+MidiInputBox {
+	color: white;
+}
+QComboBox {
+	color: white;
+	background:qlineargradient(x1:0, y1:0, x2:1, y2:1,
+			stop: 0 black, stop: 1.0 darkgray);
+	selection-color: black;
+	selection-background-color: white;
+	border: 1px outset gray;
+	padding: 2px 2px;
+}
+QComboBox:focus {
+	border-color: white;
+}
+QComboBox QAbstractItemView::item {
+	margin-top: 2px;
+}
+QComboBox QAbstractItemView {
+	color: white;
+	background:qlineargradient(x1:0, y1:0, x2:1, y2:1,
+			stop: 0 black, stop: 1.0 darkgray);
+	selection-color: black;
+	selection-background-color: white;
+	border-style:none;
+}
+QScrollBar {
+	color: white;
+	background:qlineargradient(x1:0, y1:0, x2:1, y2:1,
+			stop: 0 black, stop: 1.0 darkgray);
+}
+
+*/

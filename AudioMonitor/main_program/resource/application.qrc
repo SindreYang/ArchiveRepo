@@ -1,0 +1,17 @@
+<!DOCTYPE RCC>
+<RCC version="1.0">
+ <qresource>
+  <file alias="logo">pics/rhdz.png</file>
+  <file alias="rhdz">pics/rhdz_logo.png</file>
+  <file alias="exit">pics/exit.png</file>
+  <file alias="add">pics/add.png</file>
+  <file alias="remove">pics/remove.png</file>
+  <file alias="qss">./style.qss</file>
+  <file alias="listen_blue">pics/listen_blue.png</file>
+    <file alias="listen_blue_s">pics/listen_blue_s.png</file>
+  <file alias="listen">pics/listen.png</file>
+  <file alias="no_listen">pics/no_listen.png</file>
+  <file alias="setting">pics/setting.png</file>
+      
+ </qresource>
+</RCC>
