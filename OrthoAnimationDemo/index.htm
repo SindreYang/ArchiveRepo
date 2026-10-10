@@ -1,0 +1,96 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0，maximum-scale=1, user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>UP3D 动画预览</title>
+    <link rel="stylesheet" href="web/css/main.css">
+    <script src="web/js/libs/jquery.js"></script>
+    <script src="web/js/libs/jszip.js"></script>
+    <script src="web/js/libs/jsziputils.js"></script>
+    <script src="web/js/libs/three.js"></script>
+    <script src="web/js/libs/OrbitControls.js"></script>
+    <script src="web/js/libs/OBJLoader.js"></script>
+    <script src="web/js/libs/JitteredBlurShader3.js"></script>
+    <script src="web/js/libs/EffectComposer.js"></script>
+    <script src="web/js/libs/RenderPass.js"></script>
+    <script src="web/js/libs/MaskPass.js"></script>
+    <script src="web/js/libs/ShaderPass.js"></script>
+    <script src="web/js/libs/BloomPass.js"></script>
+    <script src="web/js/libs/CopyShader.js"></script>
+    <script src="web/js/libs/DotScreenShader.js"></script>
+    <script src="web/js/libs/RGBShiftShader.js"></script>
+    <script src="web/js/libs/ConvolutionShader.js"></script>
+    <script src="web/js/libs/FXAAShader.js"></script>
+    <script src="web/js/libs/CTMLoader.js"></script>
+    <script src="web/js/libs/CTMWorker.js"></script>
+    <script src="web/js/libs/lzma.js"></script>
+    <script src="web/js/libs/ctm.js"></script>
+    <script src="web/js/libs/WebGL.js"></script>
+    <script src="web/js/libs/gif.js"></script>
+    <script src="web/js/main.js?v=20261010-gif"></script>	
+</head>
+<body>
+    <div id="canvasdiv"></div>
+    <div id="title">
+        <div id="msg">UP3D</div>        
+    </div>
+    <div id="Temp">
+    <div id="menu">
+        <input type="range" name="进度" step="1" mini="0" max="10"disabled="true" id="jindutiao">
+        <input type="checkbox"  name="循环" checked="false" disabled="true" hidden="true" id="xunhuan">       
+        <button type="button" id="exportgif" disabled="true">保存 GIF</button>
+        <span id="exportstatus"></span>
+    </div>
+    <div id="playorstop">
+        <img src="web/img/bofang.png"/>
+    </div>
+    <div id="stop" hidden="true">
+        <img src="web/img/stop.png"/>
+    </div>
+    <div id="front2" >
+        <img src="web/img/front2.png"/>
+    </div>
+    <div id="back2" >
+        <img src="web/img/back2.png"/>
+    </div>
+    </div>
+    <div id="top">
+        <img src="web/img/top.png"/> 
+    </div>
+    <div id="bottom">
+        <img src="web/img/bottom.png"/> 
+    </div>
+    <div id="front">
+        <img src="web/img/front.png"/> 
+    </div>
+    <div id="right">
+        <img src="web/img/right.png"/> 
+    </div>
+    <div id="left">
+        <img src="web/img/left.png"/> 
+    </div>
+    <div id="hide">
+        <img src="web/img/load.png"/>
+    </div>
+</body>
+<script type="text/javascript">
+
+jQuery(document).ready(function () {
+	mainbasepath = "web";
+	var orderid="20181128175620378388";
+	var parameters = {
+			mangerJsonPath:"data/"+orderid+"/clip/config.json",
+			jsonPath:"data/"+orderid+"/clip/Tooth/AxisInfo.json",
+			downpath:"data/"+orderid+"/clip/Down",
+			uppath:"data/"+orderid+"/clip/Up",
+			toothpath:"data/"+orderid+"/clip/Tooth",
+	}
+	init(parameters);
+})
+</script>
+</html>

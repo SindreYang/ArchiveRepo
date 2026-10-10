@@ -1,0 +1,1218 @@
+html{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+@media (min-width: 1200px){
+    body{
+        width: 43%;
+        height: 100%;
+        overflow: hidden;
+        margin: 0;
+        padding: 0;		
+    }
+    #logo img{
+        width: 60%;
+        height: 60%;
+    }
+    #qr{
+        position: absolute;
+        top: 62%;
+        left: 62%;
+        color: white;
+    }
+    #qr img{
+        width: 50%;
+        height: 50%;
+    }
+    #title{
+        position: absolute;
+        top: 0;
+        left: 43%;
+        height: 40%;
+        width: 100%;
+        background-color: white;
+    }
+    #title #msg5{
+        position: relative;
+        left: 2%;
+        top: 45%;
+        color: white;
+        text-align: left;
+        font-size: 1.2em;
+        font-weight: bold;
+        line-height: 38px;
+        letter-spacing: 0.2em;
+    }
+    #title #msg{
+        position: relative;
+        left: 2%;
+        top: 75%;
+        color: white;
+        text-align: left;
+        font-size: 2em;
+        font-weight: bold;
+        line-height: 38px;
+        letter-spacing: 0.2em;
+    }
+    #msg1{
+        position: absolute;
+        left: 45%;
+        top: 42%;
+        right: 20%;
+        color: black;
+        text-align: left;
+        font-size: 1em;
+        line-height: 38px;
+        letter-spacing: 0.2em;
+    }
+    #msg2{
+        position: absolute;
+        top: 85%;
+        left: 45%;
+        color: black;
+        text-align: left;
+        font-size: 0.8em;
+        line-height: 20px;
+        letter-spacing: 0.2em;
+    }
+    #msg4{
+        position: absolute;
+        right: 20%;
+        top: 85%;
+        color: black;
+        text-align: right;
+        font-size: 0.8em;
+        line-height: 20px;
+        letter-spacing: 0.2em;
+    }
+    #msg3{
+        position: absolute;
+        top: 96%;
+        left: 43%;
+        right:20%;
+        color: black;
+        text-align: right;
+        font-size: 0.4em;
+        line-height: 20px;
+        letter-spacing: 0.1em;
+    }
+    #msg6{
+        position: absolute;
+        top: 93%;
+        left: 43%;
+        right:20.5%;
+        color: black;
+        text-align: right;
+        font-size: 0.3em;
+        line-height: 20px;
+        letter-spacing: 0.05em;
+    }
+    #hide{
+        position: absolute;
+        top:32%;
+        left: 18%;
+        color: white;
+    }
+    #hide img{
+        width: 15%;
+        height: 15%;
+    }
+    #top{
+        position: absolute;
+        float:left;
+        left: 4%;
+        top: 4%;
+        color: white;
+    }
+    #top img{
+        width: 90%;
+        height: 90%;
+    }
+    #bottom{
+        position: absolute;
+        float:left;
+        left: 12%;
+        top: 4%;
+        color: white;
+    }
+    #bottom img{
+        width: 90%;
+        height: 90%;
+    }
+    #front{
+        position: absolute;
+        float:left;
+        left: 20%;
+        top: 4%;
+        color: white;
+    }
+    #front img{
+        width: 90%;
+        height: 90%;
+    }
+    #right{
+        position: absolute;
+        float:left;
+        left: 28%;
+        top: 4%;
+        color: white;
+    }
+    #right img{
+        width: 90%;
+        height: 90%;
+    }
+    #left{
+        position: absolute;
+        float:left;
+        left: 36%;
+        top: 4%;
+        color: white;
+    }
+    #left img{
+        width: 90%;
+        height: 90%;
+    }
+    #Temp{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 57%;
+        height: 40%;
+        background-color:white;
+    }
+    #menu{
+        position: relative;
+        height: 3%;
+        width: 80%;
+        top: 55%;
+        left: 10%;
+        color: white;
+    }
+    #menu #jindutiao{
+        width: 100%;
+        height: 100%;
+    }
+    #front2{
+        position: absolute;
+        float:left;
+        left: 34%;
+        top: 23.5%;
+        color: white;
+    }
+    #front2 img{
+        width: 75%;
+        height: 75%;
+    }
+    #playorstop{
+        position: absolute;
+        float:left;
+        left: 46.5%;
+        top: 21%;
+        color: white;
+    }
+    #playorstop img{
+        width: 90%;
+        height: 90%;
+    }
+    #stop{
+        position: absolute;
+        float:left;
+        left: 46.5%;
+        top: 21%;
+        color: white;
+    }
+    #stop img{
+        width: 90%;
+        height: 90%;
+    }
+    #back2{
+        position: absolute;
+        float:left;
+        left: 60%;
+        top: 23.5%;
+        color: white;
+    }
+    #back2 img{
+        width: 75%;
+        height: 75%;
+    }
+}
+@media (min-width: 980px){
+    body{
+        width: 43%;
+        height: 100%;
+        overflow: hidden;
+        margin: 0;
+        padding: 0;
+    }
+    #canvasdiv{
+        position: relative;
+        top: 0;
+        height: 60%;
+    }
+    #logo{
+        position: absolute;
+        top: 2%;
+        left: 62%;
+        color: white;
+    }
+    #logo img{
+        width: 60%;
+        height: 60%;
+    }
+    #qr{
+        position: absolute;
+        top: 62%;
+        left: 62%;
+        color: white;
+    }
+    #qr img{
+        width: 50%;
+        height: 50%;
+    }
+    #title{
+        position: absolute;
+        top: 0;
+        left: 43%;
+        height: 40%;
+        width: 100%;
+        background-color: white;
+    }
+    #title #msg5{
+        position: relative;
+        left: 2%;
+        top: 45%;
+        color: white;
+        text-align: left;
+        font-size: 1.2em;
+        font-weight: bold;
+        line-height: 38px;
+        letter-spacing: 0.2em;
+    }
+    #title #msg{
+        position: relative;
+        left: 2%;
+        top: 75%;
+        color: white;
+        text-align: left;
+        font-size: 2em;
+        font-weight: bold;
+        line-height: 38px;
+        letter-spacing: 0.2em;
+    }
+    #msg1{
+        position: absolute;
+        left: 45%;
+        top: 42%;
+        right: 20%;
+        color: black;
+        text-align: left;
+        font-size: 1em;
+        line-height: 38px;
+        letter-spacing: 0.2em;
+    }
+    #msg2{
+        position: absolute;
+        top: 85%;
+        left: 45%;
+        color: black;
+        text-align: left;
+        font-size: 0.8em;
+        line-height: 20px;
+        letter-spacing: 0.2em;
+    }
+    #msg4{
+        position: absolute;
+        right: 20%;
+        top: 85%;
+        color: black;
+        text-align: right;
+        font-size: 0.8em;
+        line-height: 20px;
+        letter-spacing: 0.2em;
+    }
+    #msg3{
+        position: absolute;
+        top: 96%;
+        left: 43%;
+        right:20%;
+        color: black;
+        text-align: right;
+        font-size: 0.4em;
+        line-height: 20px;
+        letter-spacing: 0.1em;
+    }
+    #msg6{
+        position: absolute;
+        top: 93%;
+        left: 43%;
+        right:20.5%;
+        color: black;
+        text-align: right;
+        font-size: 0.3em;
+        line-height: 20px;
+        letter-spacing: 0.05em;
+    }
+    #hide{
+        position: absolute;
+        top:32%;
+        left: 18%;
+        color: white;
+    }
+    #hide img{
+        width: 15%;
+        height: 15%;
+    }
+    #top{
+        position: absolute;
+        float:left;
+        left: 4%;
+        top: 4%;
+        color: white;
+    }
+    #top img{
+        width: 90%;
+        height: 90%;
+    }
+    #bottom{
+        position: absolute;
+        float:left;
+        left: 12%;
+        top: 4%;
+        color: white;
+    }
+    #bottom img{
+        width: 90%;
+        height: 90%;
+    }
+    #front{
+        position: absolute;
+        float:left;
+        left: 20%;
+        top: 4%;
+        color: white;
+    }
+    #front img{
+        width: 90%;
+        height: 90%;
+    }
+    #right{
+        position: absolute;
+        float:left;
+        left: 28%;
+        top: 4%;
+        color: white;
+    }
+    #right img{
+        width: 90%;
+        height: 90%;
+    }
+    #left{
+        position: absolute;
+        float:left;
+        left: 36%;
+        top: 4%;
+        color: white;
+    }
+    #left img{
+        width: 90%;
+        height: 90%;
+    }
+    #Temp{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 57%;
+        height: 40%;
+        background-color:white;
+    }
+    #menu{
+        position: relative;
+        height: 3%;
+        width: 80%;
+        top: 55%;
+        left: 10%;
+        color: white;
+    }
+    #menu #jindutiao{
+        width: 100%;
+        height: 100%;
+    }
+    #front2{
+        position: absolute;
+        float:left;
+        left: 34%;
+        top: 23.5%;
+        color: white;
+    }
+    #front2 img{
+        width: 75%;
+        height: 75%;
+    }
+    #playorstop{
+        position: absolute;
+        float:left;
+        left: 46.5%;
+        top: 21%;
+        color: white;
+    }
+    #playorstop img{
+        width: 90%;
+        height: 90%;
+    }
+    #stop{
+        position: absolute;
+        float:left;
+        left: 46.5%;
+        top: 21%;
+        color: white;
+    }
+    #stop img{
+        width: 90%;
+        height: 90%;
+    }
+    #back2{
+        position: absolute;
+        float:left;
+        left: 60%;
+        top: 23.5%;
+        color: white;
+    }
+    #back2 img{
+        width: 75%;
+        height: 75%;
+    }
+}
+@media screen and (min-width: 768px) and (max-width: 979px){
+    body{
+        width: 43%;
+        height: 100%;
+        overflow: hidden;
+        margin: 0;
+        padding: 0;
+    }
+    #canvasdiv{
+        position: relative;
+        top: 0;
+        height: 60%;
+    }
+    #logo{
+        position: absolute;
+        top: 2%;
+        left: 62%;
+        color: white;
+    }
+    #logo img{
+        width: 60%;
+        height: 60%;
+    }
+    #qr{
+        position: absolute;
+        top: 62%;
+        left: 62%;
+        color: white;
+    }
+    #qr img{
+        width: 50%;
+        height: 50%;
+    }
+    #title{
+        position: absolute;
+        top: 0;
+        left: 43%;
+        height: 40%;
+        width: 100%;
+        background-color: white;
+    }
+    #title #msg5{
+        position: relative;
+        left: 2%;
+        top: 45%;
+        color: white;
+        text-align: left;
+        font-size: 1.2em;
+        font-weight: bold;
+        line-height: 38px;
+        letter-spacing: 0.2em;
+    }
+    #title #msg{
+        position: relative;
+        left: 2%;
+        top: 75%;
+        color: white;
+        text-align: left;
+        font-size: 2em;
+        font-weight: bold;
+        line-height: 38px;
+        letter-spacing: 0.2em;
+    }
+    #msg1{
+        position: absolute;
+        left: 45%;
+        top: 42%;
+        right: 20%;
+        color: black;
+        text-align: left;
+        font-size: 1em;
+        line-height: 38px;
+        letter-spacing: 0.2em;
+    }
+    #msg2{
+        position: absolute;
+        top: 85%;
+        left: 45%;
+        color: black;
+        text-align: left;
+        font-size: 0.8em;
+        line-height: 20px;
+        letter-spacing: 0.2em;
+    }
+    #msg4{
+        position: absolute;
+        right: 20%;
+        top: 85%;
+        color: black;
+        text-align: right;
+        font-size: 0.8em;
+        line-height: 20px;
+        letter-spacing: 0.2em;
+    }
+    #msg3{
+        position: absolute;
+        top: 96%;
+        left: 43%;
+        right:20%;
+        color: black;
+        text-align: right;
+        font-size: 0.4em;
+        line-height: 20px;
+        letter-spacing: 0.1em;
+    }
+    #msg6{
+        position: absolute;
+        top: 93%;
+        left: 43%;
+        right:20.5%;
+        color: black;
+        text-align: right;
+        font-size: 0.3em;
+        line-height: 20px;
+        letter-spacing: 0.05em;
+    }
+    #hide{
+        position: absolute;
+        top:32%;
+        left: 18%;
+        color: white;
+    }
+    #hide img{
+        width: 15%;
+        height: 15%;
+    }
+    #top{
+        position: absolute;
+        float:left;
+        left: 4%;
+        top: 4%;
+        color: white;
+    }
+    #top img{
+        width: 90%;
+        height: 90%;
+    }
+    #bottom{
+        position: absolute;
+        float:left;
+        left: 12%;
+        top: 4%;
+        color: white;
+    }
+    #bottom img{
+        width: 90%;
+        height: 90%;
+    }
+    #front{
+        position: absolute;
+        float:left;
+        left: 20%;
+        top: 4%;
+        color: white;
+    }
+    #front img{
+        width: 90%;
+        height: 90%;
+    }
+    #right{
+        position: absolute;
+        float:left;
+        left: 28%;
+        top: 4%;
+        color: white;
+    }
+    #right img{
+        width: 90%;
+        height: 90%;
+    }
+    #left{
+        position: absolute;
+        float:left;
+        left: 36%;
+        top: 4%;
+        color: white;
+    }
+    #left img{
+        width: 90%;
+        height: 90%;
+    }
+    #Temp{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 57%;
+        height: 40%;
+        background-color:white;
+    }
+    #menu{
+        position: relative;
+        height: 3%;
+        width: 80%;
+        top: 55%;
+        left: 10%;
+        color: white;
+    }
+    #menu #jindutiao{
+        width: 100%;
+        height: 100%;
+    }
+    #front2{
+        position: absolute;
+        float:left;
+        left: 34%;
+        top: 23.5%;
+        color: white;
+    }
+    #front2 img{
+        width: 75%;
+        height: 75%;
+    }
+    #playorstop{
+        position: absolute;
+        float:left;
+        left: 46.5%;
+        top: 21%;
+        color: white;
+    }
+    #playorstop img{
+        width: 90%;
+        height: 90%;
+    }
+    #stop{
+        position: absolute;
+        float:left;
+        left: 46.5%;
+        top: 21%;
+        color: white;
+    }
+    #stop img{
+        width: 90%;
+        height: 90%;
+    }
+    #back2{
+        position: absolute;
+        float:left;
+        left: 60%;
+        top: 23.5%;
+        color: white;
+    }
+    #back2 img{
+        width: 75%;
+        height: 75%;
+    }
+}
+@media (max-width: 767px){
+    body{
+        width: 43%;
+        height: 100%;
+        overflow: hidden;
+        margin: 0;
+        padding: 0;
+    }
+    #canvasdiv{
+        position: relative;
+        top: 0;
+        height: 60%;
+    }
+    #logo{
+        position: absolute;
+        top: 2%;
+        left: 62%;
+        color: white;
+    }
+    #logo img{
+        width: 60%;
+        height: 60%;
+    }
+    #qr{
+        position: absolute;
+        top: 62%;
+        left: 62%;
+        color: white;
+    }
+    #qr img{
+        width: 50%;
+        height: 50%;
+    }
+    #title{
+        position: absolute;
+        top: 0;
+        left: 43%;
+        height: 40%;
+        width: 100%;
+        background-color: white;
+    }
+    #title #msg5{
+        position: relative;
+        left: 2%;
+        top: 45%;
+        color: white;
+        text-align: left;
+        font-size: 1.2em;
+        font-weight: bold;
+        line-height: 38px;
+        letter-spacing: 0.2em;
+    }
+    #title #msg{
+        position: relative;
+        left: 2%;
+        top: 75%;
+        color: white;
+        text-align: left;
+        font-size: 2em;
+        font-weight: bold;
+        line-height: 38px;
+        letter-spacing: 0.2em;
+    }
+    #msg1{
+        position: absolute;
+        left: 45%;
+        top: 42%;
+        right: 20%;
+        color: black;
+        text-align: left;
+        font-size: 1em;
+        line-height: 38px;
+        letter-spacing: 0.2em;
+    }
+    #msg2{
+        position: absolute;
+        top: 85%;
+        left: 45%;
+        color: black;
+        text-align: left;
+        font-size: 0.8em;
+        line-height: 20px;
+        letter-spacing: 0.2em;
+    }
+    #msg4{
+        position: absolute;
+        right: 20%;
+        top: 85%;
+        color: black;
+        text-align: right;
+        font-size: 0.8em;
+        line-height: 20px;
+        letter-spacing: 0.2em;
+    }
+    #msg3{
+        position: absolute;
+        top: 96%;
+        left: 43%;
+        right:20%;
+        color: black;
+        text-align: right;
+        font-size: 0.4em;
+        line-height: 20px;
+        letter-spacing: 0.1em;
+    }
+    #msg6{
+        position: absolute;
+        top: 93%;
+        left: 43%;
+        right:20.5%;
+        color: black;
+        text-align: right;
+        font-size: 0.3em;
+        line-height: 20px;
+        letter-spacing: 0.05em;
+    }
+    #hide{
+        position: absolute;
+        top:32%;
+        left: 18%;
+        color: white;
+    }
+    #hide img{
+        width: 15%;
+        height: 15%;
+    }
+    #top{
+        position: absolute;
+        float:left;
+        left: 4%;
+        top: 4%;
+        color: white;
+    }
+    #top img{
+        width: 90%;
+        height: 90%;
+    }
+    #bottom{
+        position: absolute;
+        float:left;
+        left: 12%;
+        top: 4%;
+        color: white;
+    }
+    #bottom img{
+        width: 90%;
+        height: 90%;
+    }
+    #front{
+        position: absolute;
+        float:left;
+        left: 20%;
+        top: 4%;
+        color: white;
+    }
+    #front img{
+        width: 90%;
+        height: 90%;
+    }
+    #right{
+        position: absolute;
+        float:left;
+        left: 28%;
+        top: 4%;
+        color: white;
+    }
+    #right img{
+        width: 90%;
+        height: 90%;
+    }
+    #left{
+        position: absolute;
+        float:left;
+        left: 36%;
+        top: 4%;
+        color: white;
+    }
+    #left img{
+        width: 90%;
+        height: 90%;
+    }
+    #Temp{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 57%;
+        height: 40%;
+        background-color:white;
+    }
+    #menu{
+        position: relative;
+        height: 3%;
+        width: 80%;
+        top: 55%;
+        left: 10%;
+        color: white;
+    }
+    #menu #jindutiao{
+        width: 100%;
+        height: 100%;
+    }
+    #front2{
+        position: absolute;
+        float:left;
+        left: 34%;
+        top: 23.5%;
+        color: white;
+    }
+    #front2 img{
+        width: 75%;
+        height: 75%;
+    }
+    #playorstop{
+        position: absolute;
+        float:left;
+        left: 46.5%;
+        top: 21%;
+        color: white;
+    }
+    #playorstop img{
+        width: 90%;
+        height: 90%;
+    }
+    #stop{
+        position: absolute;
+        float:left;
+        left: 46.5%;
+        top: 21%;
+        color: white;
+    }
+    #stop img{
+        width: 90%;
+        height: 90%;
+    }
+    #back2{
+        position: absolute;
+        float:left;
+        left: 60%;
+        top: 23.5%;
+        color: white;
+    }
+    #back2 img{
+        width: 75%;
+        height: 75%;
+    }
+}
+@media (max-width: 480px){
+    body{
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        margin: 0;
+        padding: 0;
+    }
+    #canvasdiv{
+        position: relative;
+        top: 0;
+        left: 2%;
+        height: 40%;
+        width: 96%;
+    }
+    #logo{
+        position: absolute;
+        top: 2%;
+        left: 2%;
+        color: white;
+    }
+    #logo img{
+        width: 40%;
+        height: 40%;
+    }
+    #qr{
+        position: absolute;
+        top: 81%;
+        left: 2%;
+        color: white;
+    }
+    #qr img{
+        width: 26%;
+        height: 26%;
+    }
+    #title{
+        position: absolute;
+        top: 45%;
+        left: 0;
+        width: 100%;
+        height: 30%;
+        background-color: white;
+    }
+    #title #msg5{
+        position: absolute;
+        left: 8%;
+        top: 30%;
+        color: black;
+        text-align: left;
+        font-size: 0.8em;
+        font-weight: bold;
+        letter-spacing: 0.2em;
+    }
+    #title #msg{
+        position: absolute;
+        top: 45%;
+        left: 8%;
+        color: white;
+        text-align: left;
+        font-size: 1.2em;
+        font-weight: bold;
+    }
+    #msg1{
+        position: absolute;
+        top: 68%;
+        left: 8%;
+        right: 8%;
+        color: black;
+        text-align: left;
+        font-size: 0.6em;
+        line-height: 20px;
+    }
+    #msg2{
+        position: absolute;
+        top: 88%;
+        left: 8%;
+        color: black;
+        text-align: left;
+        font-size: 0.4em;
+        line-height: 15px;
+    }
+    #msg4{
+        position: absolute;
+        right: 8%;
+        top: 88%;
+        color: black;
+        text-align: right;
+        font-size: 0.4em;
+        line-height: 15px;
+    }
+    #msg6{
+        position: absolute;
+        top: 93%;
+        left: 8%;
+        color: black;
+        text-align: left;
+        font-size: 0.3em;
+        line-height: 20px;
+    }
+    #msg3{
+        position: absolute;
+        top: 96%;
+        left: 8%;
+        color: black;
+        text-align: left;
+        font-size: 0.3em;
+        line-height: 15px;
+    }
+    #Temp{
+        position: absolute;
+        top: 40%;
+        left: 2%;
+        height: 10%;
+        width: 96%;
+        background-color:white;
+    }
+    #menu{
+        position: absolute;
+        height: 3%;
+        width: 80%;
+        top: 75%;
+        color: white;
+    }
+    #menu #jindutiao{
+        width: 100%;
+        height: 100%;
+    }
+    #hide{
+        position: absolute;
+        top:20%;
+        left: 42%;
+        color: white;
+    }
+    #hide img{
+        width: 30%;
+        height: 30%;
+    }
+    #playorstop{
+        position: absolute;
+        float:left;
+        left: 49%;
+        top: 13%;
+        color: white;
+    }
+    #playorstop img{
+        width: 60%;
+        height: 60%;
+    }
+    #stop{
+        position: absolute;
+        float:left;
+        left: 49%;
+        top: 13%;
+        color: white;
+    }
+    #stop img{
+        width: 60%;
+        height: 60%;
+    }
+    #front2{
+        position: absolute;
+        float:left;
+        left: 38%;
+        top: 14.5%;
+        color: white;
+    }
+    #front2 img{
+        width: 60%;
+        height: 60%;
+    }
+    #back2{
+        position: absolute;
+        float:left;
+        left: 60%;
+        top: 14.5%;
+        color: white;
+    }
+    #back2 img{
+        width: 60%;
+        height: 60%;
+    }
+    #top{
+        position: absolute;
+        float:left;
+        left: 6%;
+        top: 2%;
+        color: white;
+    }
+    #top img{
+        width: 60%;
+        height: 60%;
+    }
+    #bottom{
+        position: absolute;
+        float:left;
+        left: 25%;
+        top: 2%;
+        color: white;
+    }
+    #bottom img{
+        width: 60%;
+        height: 60%;
+    }
+    #front{
+        position: absolute;
+        float:left;
+        left: 47%;
+        top: 2%;
+        color: white;
+    }
+    #front img{
+        width: 60%;
+        height: 60%;
+    }
+    #right{
+        position: absolute;
+        float:left;
+        left: 67%;
+        top: 2%;
+        color: white;
+    }
+    #right img{
+        width: 60%;
+        height: 60%;
+    }
+    #left{
+        position: absolute;
+        float:left;
+        left: 88%;
+        top: 2%;
+        color: white;
+    }
+    #left img{
+        width: 60%;
+        height: 60%;
+    }
+}

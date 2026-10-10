@@ -3,6 +3,15 @@
 
 为存放和管理过时、不再活跃使用但可能仍具有历史价值或参考意义的代码与文件而特别设立的
 
+## 归档项目
+
+### 正畸三维动画演示
+
+- 目录：[OrthoAnimationDemo](OrthoAnimationDemo/)
+- 说明：[README.md](OrthoAnimationDemo/README.md)
+- 内容：基于 Three.js 的上下颌牙齿/牙龈 CTM 动画演示，包含原始 CTM 数据、网页资源和 GIF 导出功能。
+- 启动方式：进入 `OrthoAnimationDemo` 后运行 `uv run --no-project python -m http.server 18976`，再访问 `http://127.0.0.1:18976/index.htm`。
+
 
 
 
