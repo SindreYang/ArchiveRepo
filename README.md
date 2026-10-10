@@ -5,12 +5,23 @@
 
 ## 归档项目
 
+| 项目 | 归档目录 | 说明 |
+| --- | --- | --- |
+| 正畸三维动画演示 | [OrthoAnimationDemo](OrthoAnimationDemo/) | Three.js 上下颌牙齿/牙龈 CTM 动画与 GIF 导出 |
+| Denta 3D Project | [Denta_3d_project](Denta_3d_project/) | 牙科三维视觉、分割、生成、关键点与部署项目说明及截图 |
+
 ### 正畸三维动画演示
 
 - 目录：[OrthoAnimationDemo](OrthoAnimationDemo/)
 - 说明：[README.md](OrthoAnimationDemo/README.md)
 - 内容：基于 Three.js 的上下颌牙齿/牙龈 CTM 动画演示，包含原始 CTM 数据、网页资源和 GIF 导出功能。
 - 启动方式：进入 `OrthoAnimationDemo` 后运行 `uv run --no-project python -m http.server 18976`，再访问 `http://127.0.0.1:18976/index.htm`。
+
+### Denta 3D Project
+
+- 目录：[Denta_3d_project](Denta_3d_project/)
+- 说明：[README.md](Denta_3d_project/README.md)
+- 内容：保留原项目 README、`.gitignore`、`temp/` 截图及全部相对图片引用。
 
 
 
